@@ -1,0 +1,31 @@
+name: Python Flask App
+
+on:
+    push:
+        branches:
+            main
+    pull__request:
+        branches:
+
+
+jobs:
+    build:
+        runs-on: ubuntu:latest
+
+    steps:
+      - name: Checkout code
+        users: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: install dependencies
+        run:  |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run tests
+        run: pytest
+      
