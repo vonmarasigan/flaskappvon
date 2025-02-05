@@ -29,8 +29,3 @@ jobs:
     - name: Run tests
       run: |
         pytest
-
-    - name: PWD testing
-      run: |
-        pwd
-        echo "this is the pwd"
