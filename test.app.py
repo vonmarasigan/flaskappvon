@@ -9,7 +9,7 @@ def client():
 
 def test_greetime(client):
     response = client('/')
-    assert response.data==b'hello devops'
+    assert response.data==b'Hello Deveops'
     assert response.status==200
 
 
