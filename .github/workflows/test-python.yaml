@@ -39,7 +39,7 @@ jobs:
 
     - name: Run SSH commands on EC2
       run: |
-        ssh ec2-usert@${{ secrets.EC2_PUBLIC_IP }} << 'EOF'
+        ssh ec2-user@${{ secrets.EC2_PUBLIC_IP }} << 'EOF'
           echo "Connected to EC2"
           uname -a
           docker ps
